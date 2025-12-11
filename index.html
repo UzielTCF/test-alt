@@ -1,168 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Gracias por visitar mi página</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg1: #0f172a;
-      --bg2: #0b1220;
-      --accent: #f59e0b;
-      --glass: rgba(255,255,255,0.06);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0}
-    body{
-      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background: linear-gradient(135deg,var(--bg1),var(--bg2));
-      color:#fff;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
-    }
-
-    .card{
-      width:100%;
-      max-width:980px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:18px;
-      padding:48px;
-      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(255,255,255,0.04);
-      text-align:center;
-    }
-
-    .big-title{
-      font-size: clamp(28px, 6.5vw, 64px);
-      line-height:1.02;
-      margin:0 0 12px 0;
-      font-weight:700;
-      letter-spacing:-0.02em;
-      text-shadow: 0 6px 30px rgba(0,0,0,0.6);
-    }
-
-    .subtitle{
-      margin:0 0 20px 0;
-      color: #cbd5e1;
-      font-weight:400;
-      font-size: clamp(14px, 2.4vw, 18px);
-    }
-
-    .actions{
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin-top:18px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:12px 18px;
-      border-radius:12px;
-      font-weight:600;
-      cursor:pointer;
-      text-decoration:none;
-      transition:transform .15s ease, box-shadow .15s ease;
-      border: none;
-      background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-      color:inherit;
-      box-shadow: 0 6px 18px rgba(2,6,23,0.5);
-    }
-
-    .btn:active{transform:translateY(1px)}
-
-    .btn-primary{
-      background: linear-gradient(90deg, #ffb86b, #f59e0b);
-      color: #081022;
-    }
-
-    .info{
-      margin-top:22px;
-      color:#a8b3c7;
-      font-size:14px;
-    }
-
-    .footer{
-      margin-top:28px;
-      display:flex;
-      justify-content:center;
-      gap:16px;
-      color:#9aa6bd;
-      font-size:13px;
-      align-items:center;
-    }
-
-    .logo{
-      width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));display:inline-grid;place-items:center;font-weight:700;color:var(--accent)
-    }
-
-    /* subtle floating animation */
-    @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
-    .floating{animation:floaty 4.5s ease-in-out infinite}
-
-    /* responsive tweaks */
-    @media (max-width:520px){
-      .card{padding:28px;border-radius:14px}
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gracias por visitar mi página</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f2f2f2;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 48px;
+            color: #333;
+        }
+        p {
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-  <main class="card" role="main" aria-labelledby="main-heading">
-    <div class="logo floating" aria-hidden="true">¡G!</div>
-    <h1 id="main-heading" class="big-title">Gracias por visitar mi página!</h1>
-    <p class="subtitle">Me alegra que estés aquí. Puedes explorar el sitio, seguirme en redes o volver cuando quieras — ¡eres bienvenido!</p>
-
-    <div class="actions" role="group" aria-label="Acciones principales">
-      <a class="btn btn-primary" href="#" onclick="alert('Gracias por tu interés!')" role="button">Explorar más</a>
-      <a class="btn" href="#contact" role="button">Contáctame</a>
-      <a class="btn" href="#" role="button" onclick="downloadHTML()">Descargar página</a>
+    <div>
+        <h1>¡Gracias por visitar mi página!</h1>
+        <p>Espero que tengas un gran día :)</p>
     </div>
-
-    <p class="info">Consejo: haz clic en "Descargar página" para guardar este diseño como archivo HTML y abrirlo localmente.</p>
-
-    <div class="footer" aria-hidden="false">
-      <span>© <span id="year"></span> Mi Sitio</span>
-      <span>•</span>
-      <a class="btn" href="https://twitter.com" target="_blank" rel="noopener" style="padding:8px 12px;">Twitter</a>
-      <a class="btn" href="https://github.com" target="_blank" rel="noopener" style="padding:8px 12px;">GitHub</a>
-    </div>
-  </main>
-
-  <script>
-    // set year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // download current HTML as file
-    function downloadHTML(){
-      const blob = new Blob([document.documentElement.outerHTML], {type: 'text/html'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'gracias_pagina.html';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-    }
-
-    // small keyboard shortcut: press G to center focus on the main heading
-    window.addEventListener('keydown', (e)=>{
-      if(e.key.toLowerCase() === 'g'){
-        document.getElementById('main-heading').scrollIntoView({behavior:'smooth', block:'center'});
-        document.getElementById('main-heading').focus({preventScroll:true});
-      }
-    });
-  </script>
 </body>
 </html>
